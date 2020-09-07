@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<h1>
+  {{ page.name }}
+</h1>
+<img src={{page.person-image}}>
+<div>
+  <p>
+    {{ page.content }}
+  </p>
+</div>
+
+  {% assign journal = site.journal | where: 'nutritionist', page.name %}
+  {% for journal in journal %}
+  <h3>
+    <a href="{{journal.url}}">
+      {{ journal.title }}
+    </a>
+  </h3>
+  <p>
+  {{journal.date | date: '%B %d, %Y' }}
+  </p>
+ {% endfor %}

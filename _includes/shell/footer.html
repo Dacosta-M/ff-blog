@@ -1,0 +1,14 @@
+<footer>
+    <nav class="nav">
+        <ul>
+            {% for link in site.data.nav.footernav %}
+            <li>
+                <a href="{{ link.slug }}">
+                    {{ link.page }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <small>&copy;{{site.title}}</small>
+</footer>

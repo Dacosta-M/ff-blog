@@ -1,0 +1,74 @@
+# Site settings
+title: Motun's Food Blog
+shortname: FFBlog
+abbrev: ffb
+email: motunrayoadeyemi@yahoo.com
+twitter: motuncosta
+description: 'For food categories and information about what you put in your mouth'
+url: ""
+timezone: Africa/Lagos
+language: en
+
+
+# Handling Reading
+charset: 'utf-8'
+
+
+# Build settings
+markdown: kramdown
+
+
+# Collections
+collections:
+  uploads:
+    title: Uploads (Media & Files)
+  journal:
+    title: Food Journal
+    output: true
+    permalink: /:collection/:name/
+  nutritionist:
+    title: Nutritionists involved
+    output: true
+    permalink: /:collection/:name/
+  topics:
+    title: Categories of topics
+    output: true
+    permalink: /:collection/:name/
+
+
+# Defaults
+defaults:
+  - scope:
+      type: journal  
+    values:
+      layout: single-journal
+  - scope:
+      type: nutritionist
+    values:
+      layout: single-nutritionist
+  - scope:
+      type: topic
+    values:
+      layout: single-topic
+
+# Include folders
+include:
+  - _pages
+
+
+# Handling Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .gitignore

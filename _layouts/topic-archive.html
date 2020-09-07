@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<section>
+    <h2>
+        {{page.title}}
+    </h2>
+    <p>
+        {{content}}
+    </p>
+    <ul class="container-1">
+        {% for item in site.topics %}
+        <li class="post-details">
+            <a href="{{item.url}}">
+                <div>
+                    <img src="{{item.topic-image}}">
+                    <time>
+                        {{ item.date | date: '%B %d, %Y' }}
+                    </time>
+                    <h2>
+                        {{ item.title }}
+                    </h2>
+                    {% assign topicName  = item.title %}
+                </div>
+                <div>
+                    <a href="item.facebook">
+                        {% include svg/facebook.html %}
+                    </a>
+                    <a href="item.instagram">
+                        {% include svg/instagram.html %}
+                    </a>
+                    <a href="item.twitter">
+                        {% include svg/twitter.html %}
+                    </a>
+                </div>
+            </a>
+        </li>
+        
+        {% endfor %}
+    </ul>
+</section>
+

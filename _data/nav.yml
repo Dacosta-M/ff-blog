@@ -1,0 +1,31 @@
+# my sweet navs
+
+headernav:
+  - page: Home
+    slug: /
+  - page: About
+    slug: /about/
+  - page: Contact
+    slug: /contact/
+  - page: Journal
+    slug: /journal/
+  - page: Nutritionist
+    slug: /nutritionist/
+  - page: Topic
+    slug: /topic/
+
+
+
+footernav:
+  - page: Home
+    slug: /
+  - page: About
+    slug: /about/
+  - page: Contact
+    slug: /contact/
+  - page: Journal
+    slug: /journal/
+  - page: Nutritionist
+    slug: /nutritionist/
+  - page: Topic
+    slug: /topic/

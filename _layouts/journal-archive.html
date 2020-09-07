@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+
+<section>
+    <div>
+        <h3> 
+            Welcome to {{site.title}} journals
+        </h3>
+        <p>
+            {{ content }}
+        </p>
+    </div>
+
+    <div>
+        <ul class="container-1">
+        {% for item in site.journal %}
+            <li class="post-details">
+                <a href="{{ item.url }}">
+                    <div>
+                        <img src="{{item.featured-image}}" alt = "">
+                        <time>
+                            {{ item.date | date: '%B %d, %Y' }}
+                        </time>
+                        <h2>
+                            {{ item.title }}
+                        </h2>
+                    </div>
+                    <a href="item.facebook">
+                        {% include svg/facebook.html %}
+                    </a>
+                    <a href="item.instagram">
+                        {% include svg/instagram.html %}
+                    </a>
+                    <a href="item.twitter">
+                        {% include svg/twitter.html %}
+                    </a>
+                </a>
+            </li>
+    {%endfor%}
+    </ul>
+    </div>
+</section>
+

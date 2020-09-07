@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<section>
+    <h4>
+        {{page.title}}
+    </h4>
+    <ul class="container-3">
+        {% for nutritionist in site.nutritionist %}
+        <li class="post-details">
+            <a href="{{nutritionist.url}}">
+                <div>
+                    <img src="{{nutritionist.person-image}}">
+                    <time>
+                        {{ nutritionist.date | date: '%B %d, %Y' }}
+                    </time>
+                    <h2>
+                        {{nutritionist.title}}
+                    </h2>
+                </div>
+                <div>
+                    <a href="item.facebook">
+                        {% include svg/facebook.html %}
+                    </a>
+                    <a href="item.instagram">
+                        {% include svg/instagram.html %}
+                    </a>
+                    <a href="item.twitter">
+                        {% include svg/twitter.html %}
+                    </a>
+                </div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>

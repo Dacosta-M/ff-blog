@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<h1>
+    {{ page.title }}
+</h1>
+<img src={{page.topic-image}}>
+    <p>
+        {{content}}
+    </p>
+
+{% assign journal = site.journal | where: 'topic', page.title %} 
+<ul>
+    {% for journal in journal %}
+    <h1>
+        <a href="{{journal.url | absolute_url}}">
+            {{ journal.title }}
+        </a>
+    </h1>
+        <p>
+            {{journal.date | date: '%B %d, %Y' }}
+        </p>
+    {% endfor %}  
+</ul>  
+

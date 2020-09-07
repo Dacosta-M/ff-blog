@@ -1,0 +1,120 @@
+---
+layout: default
+---
+<section>
+    <div class="home-container">
+        <img src={{page.home-image}}>
+        <h2>
+            {{page.title}}
+        </h2>
+        <p>
+            {{content}} 
+        </p>
+    </div>
+
+    <div class="container">
+        <div>
+            <h3>
+                JOURNALS
+            </h3>
+            <ul class="container-1">
+                {% for item in site.journal %}
+                <li>
+                    <a href="{{ item.url }}">
+                        <div>
+                            <img src="{{item.featured-image}}" alt="">
+                            <time>
+                                {{ item.date | date: '%B %d, %Y' }}
+                            </time>
+                            <h4>
+                                {{ item.title }}
+                            </h4>    
+                        </div>
+                        <div>
+                            <a href="item.facebook">
+                                {% include svg/facebook.html %}
+                            </a>
+                            <a href="item.instagram">
+                                {% include svg/instagram.html %}
+                            </a>
+                            <a href="item.twitter">
+                                {% include svg/twitter.html %}
+                            </a>
+                        </div>
+                    </a>
+                </li>
+                {%endfor%}
+            </ul>
+        </div>
+        <h2>
+            FRUITS X
+        </h2>
+        <div>
+            <h3>
+                NUTRITIONIST
+            </h3>
+            <ul class="container-2">
+                {% for item in site.nutritionist %}
+                <li>
+                    <a href="{{ item.url }}">
+                    <div>
+                        <img src="{{item.person-image}}" alt="">
+                        <time>
+                            {{ item.date | date: '%B %d, %Y' }}
+                        </time>
+                        <h4>
+                            {{ item.title }}
+                        </h4>
+                    </div>
+                    <div>
+                        <a href="item.facebook">
+                            {% include svg/facebook.html %}
+                        </a>
+                        <a href="item.instagram">
+                            {% include svg/instagram.html %}
+                        </a>
+                        <a href="item.twitter">
+                            {% include svg/twitter.html %}
+                        </a>
+                    </div>
+                    </a>
+                </li>
+                {%endfor%}
+            </ul>
+        </div>
+
+        <div>
+            <h3>
+                TOPICS
+            </h3>
+            <ul class="container-3">
+                {% for item in site.topics%}
+                <li>
+                    <a href="{{ item.url }}">
+                        <div>
+                            <img src="{{item.topic-image}}" alt="">
+                            <time>
+                                {{ item.date | date: '%B %d, %Y' }}
+                            </time>
+                            <h4>
+                                {{ item.title }}
+                            </h4>
+                        </div>
+                        <div>
+                            <a href="item.facebook">
+                                {% include svg/facebook.html %}
+                            </a>
+                            <a href="item.instagram">
+                                {% include svg/instagram.html %}
+                            </a>
+                            <a href="item.twitter">
+                                {% include svg/twitter.html %}
+                            </a>
+                        </div>
+                    </a>
+                </li>
+                {%endfor%}
+            </ul>
+        </div>
+    </div>
+</section>

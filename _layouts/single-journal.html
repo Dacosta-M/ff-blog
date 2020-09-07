@@ -1,0 +1,30 @@
+--- 
+layout: default 
+---
+
+<article>
+    <h2>
+        {{page.title}}
+    </h2>
+    <img src={{page.featured-image}}>
+    <time>
+        {{page.date | date: '%B %d, %Y'}}
+    </time>
+    <p>
+    {{content}}
+    </p>
+</article>
+
+{% assign nutritionist = site.nutritionist | where: 'name', page.nutritionist | first %} 
+{% if nutritionist %}
+<a href="{{ nutritionist.url }}">
+    {{ nutritionist.name }}
+</a>
+{% endif %}
+
+{% assign item = site.topics | where: 'title', page.topics | first %}
+{% if item %}
+    <a href="{{ item.url }}">
+        {{ item.title }}
+    </a>
+{% endif %}
