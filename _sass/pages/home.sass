@@ -12,13 +12,12 @@
     width: 100%
     margin-bottom: 50px
     img 
-        height: 600px
-
+        @media only screen and (min-width: 992px)
+            height: 600px
 .container
     margin-top: 20px 
     color: white
     text-align: center
-    line-height: -5px
     h2 
         color: white
         background-image: url("/uploads/topicpix.jpg")
@@ -33,3 +32,7 @@
         color: red
         text-align: left
         margin-bottom: -60px
+
+.width-300px
+    width:          100%
+    max-width:      350px
